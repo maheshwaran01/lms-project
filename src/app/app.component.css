@@ -1,0 +1,21 @@
+ .btn {
+	color: white;
+	background-color: #4285F4;
+	padding: 18px 26px;
+	border: none;
+	border-radius: 30px;
+	border-bottom-right-radius: 0px;
+  }
+   .help {
+	position:fixed;
+	bottom: 10px;
+	right: 20px;
+  }
+  .dot{
+  color: green;
+  width:3px;
+  right:20PX;
+  bottom: 60px;
+
+  
+  }

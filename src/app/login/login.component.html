@@ -1,0 +1,30 @@
+<body>
+    <div class="container">
+        <div class="col-sm-4">
+            <div class="row">
+                <form #Form="ngForm" (submit)="login(Form.value)" ngNativeValidate #form class="form">
+                    <div class="text-center box">
+                        <img class="logo" src="../../assets/logo.png">
+                        <h3>Welcome</h3>
+                        <p>Login to digital link to continue to digital Lync
+                            LMS.</p>
+                        <div class="input-box">
+                            <input class="input" type="text" id="email" name="email" [(ngModel)]="email" required>
+                            <label>Email Address</label>
+                        </div>
+                        <div class="input-box">
+                            <input class="input" type="password" id="password" name="password" [(ngModel)]="password"
+                                required>
+                            <label>Password</label>
+                        </div>
+                        <div class="invalid-username-passsword" *ngIf="message === 'login Failed'"></div>
+                        <div class="text">
+                            <a class="t1" (click)="forgotpass()">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn">Continue</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

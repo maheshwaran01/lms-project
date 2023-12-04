@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+<div class=" container title">
+    <div class="row">
+        <div class="col-sm-6 pro">
+            <h4>Edit Profile</h4>
+
+            <form>
+                <div class="mb-3 ">
+                    <label for="exampleInputEmail1" class="form-label">Name:</label>
+                    <input class=" col-sm-11 dtls" type="text" name="username" [(ngModel)]="username"
+                        placeholder="john Doe">
+                </div>
+                <div class="mb-3 ">
+                    <label for="exampleInputPassword1" class="form-label">Email:</label>
+                    <input class="col-sm-11 dtls" type="email" name="email" [(ngModel)]="email"
+                        placeholder="user@learner@konamars.com">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPicture1" class="form-label">Profile Picture:</label><br>
+                </div>
+                <div class="picture" *ngIf="cap" id="dropdownMenuButton" data-mdb-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="img-profile" [src]="profile" alt="">
+                </div>
+                <div class="profile1" *ngIf="!cap" id="dropdownMenuButton" data-mdb-toggle="dropdown"
+                    aria-expanded="false">
+                    {{profile}}
+                </div>
+                <input class="file" type="file">
+
+                <button type=" submit" class=" col-sm-11 btn1 ">Save</button>
+                <div>
+                    <button type="reset" class=" col-sm-11 btn2">Reset Password</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>

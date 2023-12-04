@@ -1,0 +1,49 @@
+.pro{
+margin: 30px auto;
+}
+.btn1{
+/* width: 100%; */
+border-radius: 0px;
+margin-bottom: 20px;
+background-color:#570df8 ;
+padding: 10px;
+color: white;
+border: none;
+}
+.btn2{
+/* width: 100%; */
+border-radius: 0px;
+background-color: #f000b8;
+padding: 10px;
+color: white;
+border: none;
+
+}
+.file{
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.form-label{
+width: 100%;
+
+}
+.dtls{
+padding: 10px;
+border: 1px solid blue;
+}
+.profile1{
+background-color: rgb(201, 201, 201);
+width: 100px;
+height: 100px;;
+/* margin: 8px; */
+display: grid;
+color: white;
+font-size: 50px     ;
+align-items: center;
+justify-content: center;
+}
+.img-profile{
+width: 100px;
+height: 100px;;
+/* margin: 8px; */
+}

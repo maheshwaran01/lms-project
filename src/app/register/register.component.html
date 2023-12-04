@@ -1,0 +1,31 @@
+<body>
+    <div class="container">
+        <div class="col-sm-4">
+            <div class="row">
+                <form (submit)="register()" ngNativeValidate #form class="form">
+                    <div class="text-center box">
+                        <img class="logo" src="../../assets/logo.png">
+                        <h3>Welcome</h3>
+                        <p></p>
+                        <div class="input-box">
+                            <input class="input" type="text" id="name" name="name" [(ngModel)]="username" required>
+                            <label>Username</label>
+                        </div>
+                        <div class="input-box">
+                            <input class="input" type="text" id="email" name="email" [(ngModel)]="email" required>
+                            <label>Email Address</label>
+                        </div>
+                        <div class="input-box">
+                            <input class="input" type="password" id="password" name="password" [(ngModel)]="password"
+                                required>
+                            <label>Password</label>
+                        </div>
+                        <button type="submit" class="btn">Register</button>
+                    </div>
+                    <p>Already have an account?<a class="log" (click)="login()">Login here</a></p>
+                </form>
+                <p *ngIf="add">success</p>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,117 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="row ">
+        <div class="col-sm-2 co1">
+            <div class="row co2">
+                <a class="col-sm-8 course">Courses</a>
+                <a class="col-sm-4 add" (click)="create()">+ADD</a>
+                <a class="col-sm-4 user" (click)="users()">Users</a>
+                <div class="co2">
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="col-sm-2 search">
+            <input class="search1" type="text" placeholder="Search Courses" [(ngModel)]="searchTerm"
+                (input)="onSearchChange()" />
+            <div class="search2" *ngFor="let course of filteredList; let i = index">
+                <p class="course-title" [ngClass]="{ active: i === selectedListItem }"
+                    (click)="selectListItem(i); listItem()">
+                    {{ course.title }}
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sm-4 " *ngIf="isShowTopic">
+            <p class="head">Create Course</p>
+            <p class="t1">Title</p>
+            <input class="col-sm-12 title" type="text" placeholder="Title">
+            <p class="t1">Description</p>
+            <textarea id="description" required placeholder="Description" rows="12" class=" col-sm-12  des"></textarea>
+            <p class="t1">Picture</p>
+            <input class="file" type="file">
+            <p class="t2">Current Picture</p>
+            <button type="submit" class=" col-sm-12 title1" (click)="addCourse(newCourse)">CREATE</button>
+        </div>
+        <div class="tab col-sm-5" *ngIf="isShowTopic2">
+            <div class=" d-flex flex-row tabs">
+                <p [ngStyle]="style('courseInfo')" (click)="active('courseInfo')">
+                    Course Info
+                </p>
+                <p [ngStyle]="style('modules')" (click)="active('modules')">
+                    Modules
+                </p>
+                <p [ngStyle]="style('projects')" (click)="active('projects')">
+                    Projects
+                </p>
+                <p [ngStyle]="style('resources')" (click)="active('resources')">Resources</p>
+                <p [ngStyle]="style('enrolled')" (click)="active('enrolled')">Enrolled</p>
+                <p [ngStyle]="style('resume')" (click)="active('resume')">Resume</p>
+            </div>
+            <div class="course" *ngIf="tabStates['courseInfo']">
+                <p><b>Name</b>: Fs - Basic - 2304 7 AM</p>
+                <p><b>Description</b>: Sai Kumar</p>
+                <p><b>Modules</b>: 10</p>
+                <p class="w-75">
+                    <b>Live class</b>:NA
+                </p>
+                <p>
+                    <input class=" col-sm-6 link" type="text">
+                    <button class="live-btn">Save live class Link</button>
+                </p>
+            </div>
+            <div class=" modules" *ngIf="tabStates['modules']">
+                <p></p>
+            </div>
+            <div *ngIf="tabStates['projects']">
+                <p class="box">No projects found. You can add projects by uploading them using the form below.</p>
+                <p>
+                    <label>Upload New project</label>
+                </p>
+                <p>
+                    <input class=" col-sm-6 resource" type="file">
+                </p>
+                <p>
+                    <button class="pro-btn">Upload</button>
+                </p>
+            </div>
+            <div *ngIf="tabStates['resources']">
+                <p class=" col-sm-12 box">No resources found. You can add resumes by uploading them using the form below
+                </p>
+                <p>
+                    <input class=" col-sm-6 resource" type="file">
+                </p>
+                <p>
+                    <button class="pro-btn">Upload</button>
+                </p>
+            </div>
+            <div class="enrolled" *ngIf="tabStates['enrolled']">
+                <p>
+
+                </p>
+            </div>
+            <div class="" *ngIf="tabStates['resume']">
+                <p class="box">No resumes found. You can add resumes by uploading them using the form below</p>
+                <p>
+                    <input class=" col-sm-6 resource" type="file">
+                </p>
+                <p>
+                    <button class="pro-btn">Upload</button>
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-4  d-flex flex-column" *ngIf="isShowTopic3">
+            <h4 class="header">Import users</h4>
+            <p class=" up-file">Upload user file</p>
+            <input class="" type="file">
+            <button class="up-btn">upload</button>
+            <h4 class="header2">Find User informaton</h4>
+            <p class="">Enter user email</p>
+            <input class="col-sm-12 text" type="text" placeholder="Student_name@digital-lync.com">
+            <button class="up-btn">find User</button>
+        </div>
+
+    </div>
