@@ -7,9 +7,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminPortalComponent } from './admin-portal/admin-portal.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import { MyCoursesComponent } from './my-courses/my-courses.component';
-import { UserDashboradComponent } from './user-dashborad/user-dashborad.component';
+import { UserDashboradComponent } from './user-dashboard/user-dashborad.component';
 import { RegisterComponent } from './register/register.component';
-import { authGuard } from './auth.guard';
+// import { authGuard } from './auth.guard';
 
 const routes: Routes = [
   {
@@ -28,28 +28,28 @@ const routes: Routes = [
   {
   path:'dashboard',
   component:DashboardComponent,
-  canActivate:[authGuard]
+  // canActivate:[authGuard]
   },
   {
   path:'admin-portal',
   component:AdminPortalComponent,
-   canActivate:[authGuard]
+  //  canActivate:[authGuard]
   },
   {
   path:'my-profile',
   component:MyProfileComponent,
-   canActivate:[authGuard]
+  //  canActivate:[authGuard]
   },
   {
   path:'my-courses',
   component:MyCoursesComponent,
-   canActivate:[authGuard]
+  //  canActivate:[authGuard]
   },
   {
   
   path:'user-dashboard',
   component:UserDashboradComponent,
-   canActivate:[authGuard]
+  //  canActivate:[authGuard]
   },
   {
   path:'register',

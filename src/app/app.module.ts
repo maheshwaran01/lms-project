@@ -15,7 +15,7 @@ import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import { MyCoursesComponent } from './my-courses/my-courses.component';
-import { UserDashboradComponent } from './user-dashborad/user-dashborad.component';
+import { UserDashboradComponent } from './user-dashboard/user-dashborad.component';
 import { RegisterComponent } from './register/register.component';
 import { UsersComponent } from './users/users.component';
 
